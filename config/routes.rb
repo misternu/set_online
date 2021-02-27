@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root to: 'lobby#index'
+  resources :rooms, :path => '/'
 end

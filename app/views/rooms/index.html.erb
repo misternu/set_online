@@ -1,0 +1,32 @@
+<main role="main">
+  <div class="container mt-3">
+    <h1>Rooms</h1>
+    <ul class="list-group">
+      <%= render partial: 'room', collection: @rooms %>
+      <li class="list-group-item list-group-item-action text-center" data-toggle="modal" data-target="#createRoomModal" id="createRoomButton">
+        Create Room
+      </li>
+    </ul>
+
+    <div class="modal fade" id="createRoomModal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <%= form_with(model: @room, local: false) do |f| %>
+              <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="titleInput" name="room[title]" class="form-control">
+              </div>
+              <div class="form-row">
+                <button type="submit" class="btn btn-primary col m-2">Create Room</button>
+                <button class="btn btn-outline-dark col m-2" data-dismiss="modal">Cancel</button>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%= javascript_pack_tag 'rooms' %>

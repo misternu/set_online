@@ -11,15 +11,11 @@
   </head>
 
   <body>
-    <header>
-      <nav class="navbar sticky-top navbar-dark bg-dark">
+    <header class="sticky-top">
+      <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand">Set Online</a>
       </nav>
     </header>
-    <main role="main">
-      <div class="container mt-3">
-        <%= yield %>
-      </div>
-    </main>
+    <%= yield %>
   </body>
 </html>
