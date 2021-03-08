@@ -8,6 +8,10 @@ class RoomsController < ApplicationController
     @room = Room.create(room_params)
   end
 
+  def show
+    @room = Room.find(params[:id])
+  end
+
   private
 
   def room_params

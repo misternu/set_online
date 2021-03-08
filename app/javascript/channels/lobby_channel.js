@@ -1,8 +1,8 @@
 import consumer from "./consumer"
 
-const roomsChannel = consumer.subscriptions.create("RoomsChannel", {
+const lobbyChannel = consumer.subscriptions.create("LobbyChannel", {
   connected() {
-    console.log('connected to the rooms channel')
+    console.log('connected to the lobby channel')
   },
 
   disconnected() {
@@ -14,4 +14,4 @@ const roomsChannel = consumer.subscriptions.create("RoomsChannel", {
   }
 });
 
-export default roomsChannel;
+export default lobbyChannel;
